@@ -17,6 +17,9 @@ RUN CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+') && \
     chmod +x /usr/local/bin/chromedriver && \
     rm -rf /tmp/chromedriver.zip /usr/local/bin/chromedriver-linux64
 
+RUN ls -l /usr/local/bin/chromedriver && chromedriver --version
+
+
 WORKDIR /app
 COPY . .
 CMD ["mvn", "test"]

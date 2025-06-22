@@ -17,6 +17,7 @@ public class GoogleTest {
     public void setUp() {
         // 👇 Explicitly set path to ChromeDriver
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        System.out.println("ChromeDriver path: " + System.getProperty("webdriver.chrome.driver"));
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
